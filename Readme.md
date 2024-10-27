@@ -41,7 +41,7 @@ The project consists of the following microservices:
    ```
 
 3. **Access the API**:
-   - Open your browser and navigate to `http://localhost:80` (or your configured port) to access the API Gateway.
+   - Open your browser and navigate to `http://localhost:8070` (or your configured port) to access the API Gateway.
 
 ## API Documentation
 
@@ -66,5 +66,5 @@ Contributions are welcome! Please open an issue or submit a pull request.
 
 For any questions or inquiries, feel free to reach out:
 
-- **Your Name**: [muhammadnawaz6935@gmail.com](mailto:muhammadnawaz6935@gmail.com)
+- **Nawaz**: [muhammadnawaz6935@gmail.com](mailto:muhammadnawaz6935@gmail.com)
 - **GitHub**: [https://github.com/mnawaz6935](https://github.com/mnawaz6935)
