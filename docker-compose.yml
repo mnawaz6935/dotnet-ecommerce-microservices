@@ -1,0 +1,42 @@
+version: '3.4'
+
+services:
+  customer-service:
+    build:
+      context: .
+      dockerfile: Customer.Microservice/Dockerfile
+    ports:
+      - "7079:7079"  # Host:Container
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+  
+  order-service:
+    build:
+      context: .
+      dockerfile: Orders.Microservices/Dockerfile
+    ports:
+      - "7183:7183"  # Host:Container
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+
+  product-service:
+    build:
+      context: .
+      dockerfile: Product.Microservice/Dockerfile
+    ports:
+      - "7218:7218"  # Host:Container
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+
+  gateway-api:
+    build:
+      context: .
+      dockerfile: Gateway.WebApi/Dockerfile
+    ports:
+      - "8070:7056"  # Host:Container (this is valid, ensure your app runs on port 7056)
+    depends_on:
+      - customer-service
+      - order-service
+      - product-service
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
